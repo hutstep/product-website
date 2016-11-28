@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  .row
+    - for (var i = 0; i < 6; i++)
+      - if (i === 3)
+        .clearfix.visible-sm-block
+      .col-md-2.col-sm-4
+        .thumbnail.text-center
+          a(href='/book/' + books[i].nameShort)
+            img(src='/images/' + books[i].nameShort + '.jpg', alt= books[i].nameLong, title= books[i].nameLong)
+          .titleContainer
+            p
+              strong= books[i].nameLong
+          p
+            a(href='/book/' + books[i].nameShort, class='btn btn-primary', role='button') More info
+          p
+            a(href= books[i].affLinks[country], class='btn btn-danger', role='button') Buy now
+  .row
+    .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+      a(href= books[0].affBanner[country].link)
+        img#middlebox(src='/images/#{books[0].affBanner[country].img}', alt= books[0].affBanner[country].alt, title= books[0].affBanner[country].alt, class='img-responsive center-block')
+  .row
+    - for (var k = 6; k < 18; k++)
+      - if (k === 12)
+        .clearfix.visible-md-block.visible-lg-block.visible-sm-block
+      - if (k === 15 || k === 9)
+        .clearfix.visible-sm-block
+      .col-md-2.col-sm-4
+        .thumbnail.text-center
+          a(href='/book/' + books[k].nameShort)
+            img(src='/images/' + books[k].nameShort + '.jpg', alt= books[k].nameLong, title= books[k].nameLong)
+          .titleContainer
+            p
+              strong= books[k].nameLong
+          p
+            a(href='/book/' + books[k].nameShort, class='btn btn-primary', role='button') More info
+          p
+            a(href= books[k].affLinks[country], class='btn btn-danger', role='button') Buy now

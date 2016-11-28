@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='BookScorpion.org is your number one source for daily book deals.')
+    title= pageHead.titleHtml
+    link(href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/yeti/bootstrap.min.css", rel="stylesheet", integrity="sha384-yxFy3Tt84CcGRj9UI7RA25hoUMpUPoFzcdPtK3hBdNgEGnh9FdKgMVM+lbAZTKN2", crossorigin="anonymous")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .container
+      .well.well-sm
+        .row
+          .col-sm-4
+            a(href='/')
+              img(src='/images/bookscorpion.png', alt='BookScorpion.org', title='BookScorpion.org', class='img-responsive')
+          .col-sm-8.hidden-xs
+            h1
+              small Your #1 Source for Daily Book Deals
+      block content
+      footer.text-center
+        p Copyright &copy; 2016 BookScorpion.org - 
+          a(href='/privacypolicy') Privacy Policy
+        p
+          small BookScorpion.org is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program<br>designed to provide a means for sites to earn advertising fees by advertising and linking to amazon.com.<br>Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.
+    //- script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
+    //- script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin='anonymous')
+    // Start of StatCounter Code for Default Guide
+    script.
+      var sc_project = 11035674; 
+      var sc_invisible = 1; 
+      var sc_security = "2c660523"; 
+      var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+      document.write("<sc" + "ript type='text/javascript' src='" + scJsHost + "statcounter.com/counter/counter.js'></" + "script>");
+    noscript.
+      <div class="statcounter">
+        <a title="free hit counter" href="http://statcounter.com/free-hit-counter/" target="_blank">
+          <img class="statcounter" src="//c.statcounter.com/11035674/0/2c660523/1/" alt="free hit counter">
+        </a>
+      </div>
+    // End of StatCounter Code for Default Guide

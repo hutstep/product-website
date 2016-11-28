@@ -1,0 +1,37 @@
+extends layout
+
+include _includes/sharedHtmlFunctions
+
+block content
+  .well
+    .row
+      .col-md-3
+        img.img-responsive.center-block(src='/images/' + book.nameShort + '.jpg', alt= book.nameLong, title= book.nameLong)
+        p#buybutton.text-center
+          a(href= book.affLinks[country], class='btn btn-danger btn-lg', role='button') Buy now
+      .col-md-9
+        h3#booktitle #{book.nameLong}<br>
+          small= book.author
+        p!= book.description
+    hr.center-block
+    .row
+      .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+        .embed-responsive.embed-responsive-16by9
+          iframe.embed-responsive-item(src= book.video, allowfullscreen)
+    hr.center-block
+    .row
+      .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+        h3#reviewstitle BookScorpion Reviews
+        .panel.panel-default
+          #reviewContainer.panel-body
+            each review in book.reviews
+              .review
+                .well.well-sm.reviewer
+                  +outputRating(review.rating)
+                  span.reviewAuthor= review.author
+                  small.text-danger= review.date
+                p.reviewText!= review.reviewText
+    .row
+      .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+        a(href= book.affBanner[country].link)
+          img(src='/images/#{book.affBanner[country].img}', alt= book.affBanner[country].alt, title= book.affBanner[country].alt, class='img-responsive center-block')

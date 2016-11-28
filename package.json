@@ -1,0 +1,24 @@
+{
+  "name": "bookscorpion",
+  "version": "0.0.1",
+  "author": "Stephan Huettner",
+  "license": "MIT",
+  "description": "Product website for affiliate marketing.",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.2.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "maxmind": "^2.1.0",
+    "mongoose": "^4.5.2",
+    "morgan": "^1.7.0",
+    "request": "^2.72.0",
+    "serve-favicon": "^2.3.0"
+  }
+}

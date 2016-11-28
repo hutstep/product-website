@@ -1,5 +1,5 @@
 # Product website
-This is a product website for affiliate marketing.
+This is a product website for affiliate marketing built with Node.js, Express, MongoDB, Jade and Bootstrap.
 
 A `.env` file with the following structure must be placed in the root directory.
 ```
